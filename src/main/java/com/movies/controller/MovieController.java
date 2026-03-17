@@ -12,7 +12,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/v1/movies")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "https://framevault-frontend.onrender.com")
 public class MovieController {
 
     @Autowired
