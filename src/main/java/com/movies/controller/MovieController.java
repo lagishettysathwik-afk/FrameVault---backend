@@ -14,15 +14,21 @@ public class MovieController {
     @Autowired
     private MovieRepository movieRepository;
 
-    // ✅ GET ALL MOVIES
+    // ✅ GET all movies
     @GetMapping
     public List<Movie> getAllMovies() {
         return movieRepository.findAll();
     }
 
-    // ✅ ADD THIS (POST API)
+    // ✅ POST add movie
     @PostMapping
     public Movie createMovie(@RequestBody Movie movie) {
         return movieRepository.save(movie);
+    }
+
+    // ✅ ADD THIS DELETE METHOD HERE
+    @DeleteMapping("/{id}")
+    public void deleteMovie(@PathVariable Long id) {
+        movieRepository.deleteById(id);
     }
 }
