@@ -8,8 +8,12 @@ public class CorsConfig implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**") // allow all endpoints
-                .allowedOrigins("https://framevault-frontend.onrender.com") // ❗ NO trailing slash
+        registry.addMapping("/**")
+                .allowedOrigins(
+                    "http://localhost:5173",
+                    "http://localhost:3000",
+                    "https://framevault-frontend.onrender.com"
+                )
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
                 .allowCredentials(true);

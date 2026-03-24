@@ -10,7 +10,11 @@ import com.movies.service.ReviewService;
 
 @RestController
 @RequestMapping("/api/v1/reviews")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {
+    "http://localhost:5173",
+    "https://framevault-frontend.onrender.com"
+})
+
 public class ReviewController {
 
     @Autowired

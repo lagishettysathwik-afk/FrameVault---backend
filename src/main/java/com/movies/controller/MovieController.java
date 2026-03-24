@@ -9,6 +9,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/movies")
+@CrossOrigin(origins = {
+    "http://localhost:5173",
+    "https://framevault-frontend.onrender.com"
+})
 public class MovieController {
 
     @Autowired
