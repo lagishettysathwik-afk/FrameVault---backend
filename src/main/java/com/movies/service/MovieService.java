@@ -29,4 +29,8 @@ public class MovieService {
     public List<String> getAllLanguages() {
         return movieRepository.findDistinctLanguages();
     }
-}
+
+    public void deleteMovie(Long id) {
+        movieRepository.deleteById(id);
+    }
+	}
